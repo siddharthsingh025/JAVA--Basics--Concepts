@@ -48,4 +48,6 @@ public class Conditional {
 
         System.out.println(salary);
     }
+
+
 }
