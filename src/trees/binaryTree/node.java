@@ -4,9 +4,9 @@ import java.lang.reflect.Constructor;
 
 public class node {
 
-    int data;
-    node lefNode;
-    node riNode;
+     public int data;
+    public node lefNode;
+    public node riNode;
 
     node(int d)
     {

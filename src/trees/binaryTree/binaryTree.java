@@ -1,6 +1,9 @@
 package trees.binaryTree;
 
+import java.util.Arrays;
 import java.util.Scanner;
+
+import com.siddharth.Array;
 
 /**
  * binaryTree
@@ -8,6 +11,7 @@ import java.util.Scanner;
 public class binaryTree {
 
    static Scanner in = new Scanner(System.in);
+   static int ans =0;
 
   static  node builTree(node root)
     {
@@ -39,17 +43,36 @@ public class binaryTree {
         System.out.println("");
         System.out.println("");
 
-        inOrderTrv(root);
+        // inOrderTrv(root);
 
-        System.out.println("");
-        preOrderTrv(root);
+        // System.out.println("");
+        // preOrderTrv(root);
 
-        System.out.println("");
-        postOrderTrv(root);
+        // System.out.println("");
+        // postOrderTrv(root);
+
+        // System.out.println("" );
+        // System.out.println( heightOfTree(root));
+
+
+//        System.out.println("" );
+//        System.out.println();
+//        System.out.println(TBview.topView(root).toString());
+
+
+//        System.out.println("" );
+//        System.out.println();
+//        treeToDLL.convertToOLL(root);
+//        treeToDLL.displayDLL();
+
+
 
         System.out.println("" );
-        System.out.println( heightOfTree(root));
-       
+        System.out.println();
+        System.out.println(DiameterOfTree.diameter(root));
+        diameter2(root);
+        System.out.println(ans);
+
 
     }
 
@@ -100,6 +123,18 @@ static int heightOfTree(node root)
     return Math.max(heightOfTree(root.lefNode), heightOfTree(root.riNode))+1;
 
 }
+
+    static int diameter2(node root)
+    {
+        if(root==null) return 0;
+
+        int dl = diameter2(root.lefNode);
+        int dr = diameter2(root.riNode);
+
+        ans= Math.max(ans,1+dl+dr);
+
+        return 1+ Math.max(dl,dr);
+    }
 
 }
 
