@@ -1,5 +1,6 @@
 package trees.binaryTree;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class binaryTree_main {
@@ -56,7 +57,11 @@ public static void main(String[] args) {
 
 
    levelOrderTV. levelOrderTr3(root);
-    
+
+
+    System.out.println("");
+    System.out.println("printing....................................");
+    System.out.println("");
 
 
    //leftView
@@ -71,6 +76,11 @@ public static void main(String[] args) {
     System.out.println("printing....................................");
     System.out.println("");
     System.out.println(LowestCommonAnc.lca(root,7,3).data);
+
+    System.out.println("");
+    System.out.println("printing....................................");
+    System.out.println("");
+    System.out.println(burnTree.minTime(root,3));
     
 
 }
