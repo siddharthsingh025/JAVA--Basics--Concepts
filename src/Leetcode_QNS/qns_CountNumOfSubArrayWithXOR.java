@@ -2,7 +2,7 @@ package Leetcode_QNS;
 
 import java.util.HashMap;
 import java.util.Map;
-
+//https://www.interviewbit.com/problems/subarray-with-given-xor/s
 public class qns_CountNumOfSubArrayWithXOR {
 
     public int solve(int[] A, int B) {
